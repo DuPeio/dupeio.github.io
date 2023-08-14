@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Luckiest+Guy&family=Playfair+Display:wght@400;500&family=Roboto+Condensed:ital@1&family=Rowdies&family=Ruslan+Display&family=Tilt+Prism&display=swap');
+
+/* page index */
+
+/* Objet qui suit la souris */
+.mouseFollow{
+    height: 20px;
+    width: 20px;
+    background-color:#E0C738 ;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    transition: 0.1s ease;
+    z-index: -9999;
+}
+.mouseFollow2{
+    height: 20px;
+    width: 20px;
+    background-color: #e0c73887 ;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    transition: 0.14s ease;
+    z-index: -9999;
+}
+
+.mouseFollow3{
+    height: 20px;
+    width: 20px;
+    background-color: #e0c73822 ;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    transition: 0.18s ease;
+    z-index: -9999;
+}
+/* Fin objet qui suit la souris */
+
+.index span{
+    font-family:'Luckiest Guy', cursive;
+    font-size: 4vw;
+}
+
+.un img{
+    position: absolute;
+    top: 3vh;
+    left: 5.5vw;
+    width: 38vw; 
+    height: 23vw;
+    transition: 600ms;
+    opacity: 75%;
+}
+
+.un span{
+    position: absolute;
+    top: 20vh;
+    left: 17vw;
+}
+
+.deux img{
+    position: absolute;
+    top: 3vh;
+    right: 5.5vw;
+    width: 37vw; 
+    height: 22vw;
+    transition: 600ms;
+    opacity: 75%;
+}
+
+.deux span{
+    position: absolute;
+    top: 20vh;
+    right: 13vw;
+}
+
+.trois img{
+    position: absolute;
+    bottom: 4vh;
+    left: 5.5vw;
+    width: 38vw; 
+    height: 23vw;
+    transition: 600ms;
+    opacity: 75%;
+}
+
+.trois span{
+    position: absolute;
+    bottom: 20vh;
+    left: 13.5vw;
+}
+  
+.quatre img {
+    position: absolute;
+    bottom: 4vh;
+    right: 5.5vw;
+    width: 38vw; 
+    height: 23vw;
+    transition: 600ms;
+    opacity: 75%;
+}
+  
+.quatre span{
+    position: absolute;
+    bottom: 20vh;
+    right: 13vw;
+}
+
+.cinq img {
+    position: absolute;
+    width: 14vw; 
+    height: 23vh;
+    top: 30vh;
+    left:43vw;
+    transition: 600ms;
+}
+  
+.cinq span{
+    position: absolute;
+    top: 50vh;
+    left: 38vw;
+}
+
+.index a:hover img{
+    transform: scale(1.05);
+    transition: 600ms;
+    opacity: 95%;
+}
+
+.index a:hover span{
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #E0C738, 0 0 30px #E0C738;
+    transition: 600ms;
+}
+
+.index a span{
+    color: white;
+    text-decoration: none;
+    font-variant-caps: small-caps;
+    transition: 600ms;  
+}
+
+.index div img{
+    position: absolute;
+    bottom: 3vh;
+    left: 48vw;
+    height: 2vw;
+    width: 2vw;
+    transition: 600ms;
+    border-radius: 50%;
+}
+
+.listInfo{
+    position: absolute;
+    opacity: 0;
+    font-size: 1vw;
+    top: 70vh;
+    left: 36vw;
+    right: 40vw;
+    list-style: none;
+    text-align: center;
+    transition: 0.6s;
+}
+
+.index div img:hover{
+    cursor: pointer;
+    transform: scale(1.35);
+    transition: 600ms;
+    box-shadow: 0 0 10px #0026ff, 0 0 20px #0026ff, 0 0 30px #0026ff;
+}
+
+.listInfoShow{
+    opacity: 1;
+}
+
+/* fin index */
+
+
+/* Barre de Navigation */
+nav{
+    position: sticky;
+    top: 0;
+    margin: 0 -1%;
+    font-family:'Luckiest Guy', cursive;
+    z-index: 9999;
+    transition: 0.6s;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    text-align: right;
+    background-color: #E0C738;
+    font-variant: small-caps;
+    
+}
+
+nav ul li{
+    padding:1vw;
+    display: inline-block;
+    margin-right: 1.5vw;
+}
+
+nav ul li div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000568;
+    text-decoration: none;
+    font-size: 1.4vw;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+
+nav ul li div:hover{
+    color :#ffffff;
+    font-size: 1.7vw;
+}
+
+
+nav ul li a img{
+    margin-right: 0.5vw;
+    height : 2.5vw;
+    width : 2.5vw;
+}
+
+nav ul li div img{
+    margin-right: 0.5vw;
+    height : 2.5vw;
+    width : 2.5vw;
+}
+
+nav ul li:first-child img{
+    position: absolute;
+    height: 7vw;
+    width: 8vw;
+    left: 1vw;
+    top: -0.3vh;
+    transform: rotate(-10deg);
+    transition: 600ms ease-in-out;
+}
+
+nav ul li:first-child div{
+    position: absolute;
+    left: 9vw;
+    top: 1.4vw;
+    color: #000568;
+}
+
+nav ul li:first-child a:hover div{
+    transition: 300ms ease-in-out;
+    color: white;
+    font-size: 1.7vw;
+}
+
+nav ul li:first-child a:hover img{
+    transform: scale(1.05);
+}
+
+.current{
+    color: white;
+}
+
+.current:hover{
+    font-size: 1.4vw;
+}
+/* Fin barre de Nav */
+
+/* Général */
+html{
+    background-color: #000338;
+    color: #ffffff;
+    overflow-x: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5vw;
+}
+
+/* Fin Général */
+
+/* Top pages */
+header{
+    background-color: white;
+    padding: 2%;
+    margin:-1%;
+    background-image:url(./images/fond2.png); 
+    background-size: 100vw;
+}
+
+#mode1{
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+    right: 2vw;
+    cursor: pointer;
+    transition: 0.6s;
+}
+#mode2{
+    position: absolute;
+    height: 4vw;
+    width: 4vw;
+    right: 2vw;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+h1{
+    font-family:'Luckiest Guy', cursive;
+    font-size: 14.5vw;
+    text-align: center;
+    margin-top: 3vw;
+    color: #E0C738;
+}
+
+header h1.derriere{
+    position: absolute;
+    font-family:'Luckiest Guy', cursive;
+    font-size: 15vw;
+    text-align: center;
+    color: #000338;
+    border: none;
+}
+
+h2{
+    font-family:'Luckiest Guy', cursive;
+    font-size: 4vw;
+    text-align: center;
+    margin-top: -1.5vw;
+    margin-bottom: 1.5vw;
+    color: #E0C738;
+}
+
+header div #btn{
+    position: absolute;
+    top: 38vw;
+    left: 44vw;
+    height: 11vw ;
+    width: 10vw;
+    animation: bouge 2s ease-in-out infinite alternate;
+    cursor: pointer;
+}
+
+@keyframes bouge {
+    0% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(10deg);
+    }
+  }
+
+/* Fin Top pages */
+
+/* Utile pour le js */
+.hide{
+    display: none;
+}
+
+/* Contenu */
+
+.main div{
+    transition: 600ms ease-in-out;
+}
+
+.main div:hover{
+    transform: rotate(0);
+}
+
+.main div a{
+    text-decoration: none;
+    color: grey;
+}
+
+.main div a:hover{
+    text-decoration: underline;
+}
+
+.p1{
+    margin-right: 32vw;
+    margin-left: 1vw;
+    padding: 5vw 0;
+    transform: rotate(-3deg);
+}
+
+.p2{
+    text-align: right;
+    margin-left: 32vw;
+    margin-right: 1vw;
+    padding-bottom: 10vw;
+    transform: rotate(3deg);
+}
+
+.p3{
+    margin-right: 32vw;
+    margin-left: 1vw;
+    padding-bottom: 10vw;
+    transform: rotate(-3deg);
+}
+
+.p4{
+    text-align: right;
+    margin-left: 32vw;
+    margin-right: 1vw;
+    padding-bottom: 10vw;
+    transform: rotate(3deg);
+}
+
+.p5{
+    text-align: left;
+    margin-right: 32vw;
+    margin-left: 1vw;
+    padding-bottom: 10vw;
+    transform: rotate(-3deg);
+}
+
+.p6{
+    text-align: right;
+    margin-left: 32vw;
+    margin-right: 1vw;
+    padding-bottom: 5vw;
+    transform: rotate(3deg);    
+}
+
+/* Fleche pour remonter */
+.flecheGen{
+    position: fixed;
+    bottom: 1vw;
+    right: 1vw;
+    width: 2vw;
+    height: 2vw;
+    background-color: white;
+    border-radius: 50%;
+    padding: 1vw;
+    cursor: pointer;
+    opacity: 30%;
+    transition: .6s ease;
+}
+
+.flecheUn{
+    position: fixed;
+    bottom: 0vw;
+    right: 1vw;
+    width: 2vw;
+    height: 2vw;
+    background-color: white;
+    border-radius: 50%;
+    padding: 1vw;
+    cursor: pointer;
+    opacity: 30%;
+    transition: 6s ease;
+    display: none;
+}
+
+.flecheDeux{
+    position: fixed;
+    bottom: 0vw;
+    right: 1vw;
+    width: 2vw;
+    height: 2vw;
+    background-color: white;
+    border-radius: 50%;
+    padding: 1vw;
+    opacity: 30%;   
+    cursor: pointer;
+    transition: 6s ease;
+    display: none;
+}
+
+.flecheHideGen{
+    transition: .4s ease;
+    bottom: 1vw;
+    opacity: 0%;
+}
+
+.flecheDiscoUn{
+    transition: .4s ease;
+    bottom: 6vw;
+    display: block;
+}
+.flecheDiscoDeux{
+    transition: .4s ease;
+    bottom: 11vw;
+    display: block;
+}
+
+.flecheTurn{
+    transform: rotate(180deg);
+}
+
+.flecheUn:hover, .flecheDeux:hover{
+    opacity: 100%;
+}
+
+
+
