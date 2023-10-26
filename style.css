@@ -591,6 +591,7 @@ header div #btn{
     margin-left: auto;
     text-decoration: none;
     color: #000338;
+    margin-right: 1.5vw;
 }
 
 .contact .box a:hover{
