@@ -19,6 +19,6 @@ function main(){
         mouseFollow3.style.left = e.pageX + "px";
         mouseFollow3.style.top = e.pageY + "px";
     });
-}
+};
 
 window.onload = main;
