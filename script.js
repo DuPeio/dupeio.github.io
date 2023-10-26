@@ -1,30 +1,24 @@
-function main (){
+function main() {
   //Creation des variables
   const btnLightning = document.querySelector(".btn");
   const mode = document.querySelector(".mode");
-  
   const meBtn = document.querySelector(".meBtn");
   const etudeBtn = document.querySelector(".etudeBtn");
   const experienceBtn = document.querySelector(".experienceBtn");
   const competenceBtn = document.querySelector(".competenceBtn");
   const contactBtn = document.querySelector(".contactBtn");
-  
   const me = document.querySelector(".me");
   const etude = document.querySelector(".etude");
   const experience = document.querySelector(".experience");
   const competence = document.querySelector(".competence");
   const contact = document.querySelector(".contact");
   const subtitle = document.querySelector(".subtitle");
-  
   let url = location.href; // Récupère l'URL complète
   let parts = url.split("/"); // Divise l'URL en parties distinctes
   let lastPart = parts[parts.length - 1];  // Récupère la dernière partie
-  
-  
   const btnArrowOne = document.querySelector(".flecheUn");
   const btnArrowTwo = document.querySelector(".flecheDeux");
-  const btnArrowGen = document.querySelector(".flecheGen")
-  
+  const btnArrowGen = document.querySelector(".flecheGen");
   
   //Mode Sombre
   mode.addEventListener("click", () => {
@@ -197,11 +191,11 @@ function main (){
   }
   
   // Fleche qui remonte
-  const pixelDebut = debut.offsetTop
-  btnArrowGen.addEventListener("click", () =>{
-    btnArrowGen.classList.toggle("flecheTurn")
-    btnArrowOne.classList.toggle("flecheDiscoUn")
-    btnArrowTwo.classList.toggle("flecheDiscoDeux")
+  const pixelDebut = debut.offsetTop;
+  btnArrowGen.addEventListener("click", () => {
+    btnArrowGen.classList.toggle("flecheTurn");
+    btnArrowOne.classList.toggle("flecheDiscoUn");
+    btnArrowTwo.classList.toggle("flecheDiscoDeux");
     btnArrowOne.addEventListener("click", () => {
       window.scrollTo({
         top: pixelDebut,
@@ -218,26 +212,26 @@ function main (){
     });
   });
   
-  window.addEventListener("scroll", () =>{
+  window.addEventListener("scroll", () => {
     if (scrollY > pixelDebut) {
-      btnArrowGen.classList.remove("flecheHideGen")
-    }else{
-      btnArrowGen.classList.add("flecheHideGen")
-      btnArrowGen.classList.remove("flecheTurn")
-      btnArrowOne.classList.remove("flecheDiscoUn")
-      btnArrowTwo.classList.remove("flecheDiscoDeux")
+      btnArrowGen.classList.remove("flecheHideGen");
+    } else {
+      btnArrowGen.classList.add("flecheHideGen");
+      btnArrowGen.classList.remove("flecheTurn");
+      btnArrowOne.classList.remove("flecheDiscoUn");
+      btnArrowTwo.classList.remove("flecheDiscoDeux");
     }
-  })
+  });
   
-  heart.addEventListener("click", () =>{
-    if (heart.innerHTML === `<img id="heartImg" src="./images/icone/heartv2.png" alt="Icone coeur">`){
-      heart.innerHTML = `<img id="heartImg" src="./images/icone/heart.png" alt="Icone coeur">`
-    }else if (heart.innerHTML === `<img id="heartImg" src="./images/icone/heart.png" alt="Icone coeur">`) {
-      heart.innerHTML =`<img id="heartImg" src="./images/icone/heartv2.png" alt="Icone coeur">`
-  }})
+  heart.addEventListener("click", () => {
+    if (heart.innerHTML === `<img id="heartImg" src="./images/icone/heartv2.png" alt="Icone coeur">`) {
+      heart.innerHTML = `<img id="heartImg" src="./images/icone/heart.png" alt="Icone coeur">`;
+    } else if (heart.innerHTML === `<img id="heartImg" src="./images/icone/heart.png" alt="Icone coeur">`) {
+      heart.innerHTML = `<img id="heartImg" src="./images/icone/heartv2.png" alt="Icone coeur">`;
+    }
+  });
 }
 
-window.onload(main);
-
+window.onload = main;
 
 
