@@ -4,6 +4,7 @@
 
 /* Objet qui suit la souris */
 .mouseFollow{
+    display: none;
     height: 20px;
     width: 20px;
     background-color:#E0C738 ;
@@ -14,6 +15,7 @@
     z-index: -9999;
 }
 .mouseFollow2{
+    display: none;
     height: 20px;
     width: 20px;
     background-color: #e0c73887 ;
@@ -25,6 +27,7 @@
 }
 
 .mouseFollow3{
+    display: none;
     height: 20px;
     width: 20px;
     background-color: #e0c73822 ;
@@ -285,20 +288,24 @@ header{
     background-size: 100vw;
 }
 
-#mode1{
+
+.mode{
     position: absolute;
+    cursor: pointer;
+    height: 5vw;
+    right: 2vw;
+    width: 5vw;
+}
+
+
+#mode1{
     height: 5vw;
     width: 5vw;
-    right: 2vw;
-    cursor: pointer;
     transition: 0.6s;
 }
 #mode2{
-    position: absolute;
     height: 4vw;
     width: 4vw;
-    right: 2vw;
-    cursor: pointer;
     transition: 0.6s;
 }
 
@@ -307,17 +314,10 @@ h1{
     font-size: 14.5vw;
     text-align: center;
     margin-top: 3vw;
-    color: #E0C738;
+    color: #000338;
+    text-shadow: 15px 15px #E0C738;
 }
 
-header h1.derriere{
-    position: absolute;
-    font-family:'Luckiest Guy', cursive;
-    font-size: 15vw;
-    text-align: center;
-    color: #000338;
-    border: none;
-}
 
 h2{
     font-family:'Luckiest Guy', cursive;
@@ -326,6 +326,7 @@ h2{
     margin-top: -1.5vw;
     margin-bottom: 1.5vw;
     color: #E0C738;
+    text-shadow: 10px 10px #16194b;
 }
 
 header div #btn{
@@ -459,6 +460,7 @@ header div #btn{
 
 .experience div p{
     color: #E0C738;
+    text-shadow: 7px 7px #000338;
     font-weight: bold;
     font-variant: small-caps;
 }
@@ -592,13 +594,14 @@ header div #btn{
     text-decoration: none;
     color: #000338;
     margin-right: 1.5vw;
+    box-shadow: 5px 5px #817324;
 }
 
 .contact .box a:hover{
     text-decoration: none;
     cursor: pointer;
     color: white;
-    box-shadow: 0 0 7px #E0C738, 0 0 13px #E0C738;
+    box-shadow: 0 0 7px #E0C738, 0 0 13px #E0C738, 5px 5px #817324;
 }
 
 .lastContact li{
@@ -612,6 +615,8 @@ header div #btn{
     padding: 0 1vw;
     transition: .6s;
 }
+
+/* Autre */
 
 .hide{
     display: none;
