@@ -1,13 +1,16 @@
-function main(){
+document.addEventListener("DOMContentLoaded", function() {
+
   //Creation des variables
   const btnLightning = document.querySelector(".btn");
   const mode = document.querySelector(".mode");
+
   const meBtn = document.querySelector(".meBtn");
   const etudeBtn = document.querySelector(".etudeBtn");
   const experienceBtn = document.querySelector(".experienceBtn");
   const competenceBtn = document.querySelector(".competenceBtn");
   const contactBtn = document.querySelector(".contactBtn");
-  const jeuBtn = document.querySelector(".jeuBtn");
+  const jeuBtn = document.querySelector(".jeuBtn")
+
   const me = document.querySelector(".me");
   const etude = document.querySelector(".etude");
   const experience = document.querySelector(".experience");
@@ -15,12 +18,18 @@ function main(){
   const contact = document.querySelector(".contact");
   const subtitle = document.querySelector(".subtitle");
   const jeu = document.querySelector(".jeu");
+  const heart = document.getElementById("heart");
+
   let url = location.href; // Récupère l'URL complète
   let parts = url.split("/"); // Divise l'URL en parties distinctes
   let lastPart = parts[parts.length - 1];  // Récupère la dernière partie
+
+
   const btnArrowOne = document.querySelector(".flecheUn");
   const btnArrowTwo = document.querySelector(".flecheDeux");
-  const btnArrowGen = document.querySelector(".flecheGen");
+  const btnArrowGen = document.querySelector(".flecheGen")
+
+
   //Mode Sombre
   mode.addEventListener("click", () => {
     if (
@@ -47,6 +56,7 @@ function main(){
       console.log(document.querySelector(".mode"));
     }
   }); 
+
   //Eclair qui descend la page
   btnLightning.addEventListener("click", () => {
     window.scrollTo({
@@ -55,6 +65,7 @@ function main(){
       behavior: "smooth",
     });
   });
+
   //Nav barre/ Gestion du contenu avec nav bar
   meBtn.addEventListener("click", () => {
     subtitle.innerHTML = "Et voici mon site web CV !";
@@ -68,9 +79,10 @@ function main(){
     competenceBtn.classList.remove("current");
     contact.classList.add("hide");
     contactBtn.classList.remove("current");
-    jeu.classList.add("hide");
-    jeuBtn.classList.remove("current");
+    // jeu.classList.add("hide");
+    // jeuBtn.classList.remove("current");
   });
+
   etudeBtn.addEventListener("click", () => {
     subtitle.innerHTML = "Partie Etude";
     me.classList.add("hide");
@@ -86,6 +98,7 @@ function main(){
     jeu.classList.add("hide");
     jeuBtn.classList.remove("current");
   });
+
   experienceBtn.addEventListener("click", () => {
     subtitle.innerHTML = "Partie Expérience";
     me.classList.add("hide");
@@ -98,9 +111,10 @@ function main(){
     competenceBtn.classList.remove("current");
     contact.classList.add("hide");
     contactBtn.classList.remove("current");
-    jeu.classList.add("hide");
-    jeuBtn.classList.remove("current");
+    // jeu.classList.add("hide");
+    // jeuBtn.classList.remove("current");
   });
+
   competenceBtn.addEventListener("click", () => {
     subtitle.innerHTML = "Partie Compétence";
     me.classList.add("hide");
@@ -113,9 +127,10 @@ function main(){
     competenceBtn.classList.add("current");
     contact.classList.add("hide");
     contactBtn.classList.remove("current");
-    jeu.classList.add("hide");
-    jeuBtn.classList.remove("current");
+    // jeu.classList.add("hide");
+    // jeuBtn.classList.remove("current");
   });
+
   contactBtn.addEventListener("click", () => {
     subtitle.innerHTML = "Partie Contact";
     me.classList.add("hide");
@@ -128,24 +143,26 @@ function main(){
     competenceBtn.classList.remove("current");
     contact.classList.remove("hide");
     contactBtn.classList.add("current");
-    jeu.classList.add("hide");
-    jeuBtn.classList.remove("current");
+    // jeu.classList.add("hide");
+    // jeuBtn.classList.remove("current");
   });
-  jeuBtn.addEventListener("click", () => {
-    subtitle.innerHTML = "Partie Mini Jeu";
-    me.classList.add("hide");
-    meBtn.classList.remove("current");
-    etude.classList.add("hide");
-    etudeBtn.classList.remove("current");
-    experience.classList.add("hide");
-    experienceBtn.classList.remove("current");
-    competence.classList.add("hide");
-    competenceBtn.classList.remove("current");
-    contact.classList.add("hide");
-    contactBtn.classList.remove("current");
-    jeu.classList.remove("hide");
-    jeuBtn.classList.add("current");
-  });
+
+  // jeuBtn.addEventListener("click", () => {
+  //   subtitle.innerHTML = "Partie Mini Jeu";
+  //   me.classList.add("hide");
+  //   meBtn.classList.remove("current");
+  //   etude.classList.add("hide");
+  //   etudeBtn.classList.remove("current");
+  //   experience.classList.add("hide");
+  //   experienceBtn.classList.remove("current");
+  //   competence.classList.add("hide");
+  //   competenceBtn.classList.remove("current");
+  //   contact.classList.add("hide");
+  //   contactBtn.classList.remove("current");
+  //   jeu.classList.remove("hide");
+  //   jeuBtn.classList.add("current");
+  // });
+
   // Gestion du contenu avec index
   if (lastPart === "main.html#me") {
     subtitle.innerHTML = "Et voici mon site web CV !";
@@ -208,12 +225,16 @@ function main(){
     contact.classList.remove("hide");
     contactBtn.classList.add("current");
   }
+
+
+ 
+
   // Fleche qui remonte
-  const pixelDebut = debut.offsetTop;
+  const pixelDebut = debut.offsetTop
   btnArrowGen.addEventListener("click", () =>{
-    btnArrowGen.classList.toggle("flecheTurn");
-    btnArrowOne.classList.toggle("flecheDiscoUn");
-    btnArrowTwo.classList.toggle("flecheDiscoDeux");
+    btnArrowGen.classList.toggle("flecheTurn")
+    btnArrowOne.classList.toggle("flecheDiscoUn")
+    btnArrowTwo.classList.toggle("flecheDiscoDeux")
     btnArrowOne.addEventListener("click", () => {
       window.scrollTo({
         top: pixelDebut,
@@ -229,17 +250,18 @@ function main(){
       });
     });
   });
+
   window.addEventListener("scroll", () =>{
     if (scrollY > pixelDebut) {
-      btnArrowGen.classList.remove("flecheHideGen");
+      btnArrowGen.classList.remove("flecheHideGen")
     }else{
-      btnArrowGen.classList.add("flecheHideGen");
-      btnArrowGen.classList.remove("flecheTurn");
-      btnArrowOne.classList.remove("flecheDiscoUn");
-      btnArrowTwo.classList.remove("flecheDiscoDeux");
+      btnArrowGen.classList.add("flecheHideGen")
+      btnArrowGen.classList.remove("flecheTurn")
+      btnArrowOne.classList.remove("flecheDiscoUn")
+      btnArrowTwo.classList.remove("flecheDiscoDeux")
     }
   });
-  
+
   heart.addEventListener("click", () => {
     if (heart.innerHTML === `<img id="heartImg" src="./images/icone/heartv2.png" alt="Icone coeur">`) {
       heart.innerHTML = `<img id="heartImg" src="./images/icone/heart.png" alt="Icone coeur">`;
@@ -247,8 +269,7 @@ function main(){
       heart.innerHTML = `<img id="heartImg" src="./images/icone/heartv2.png" alt="Icone coeur">`;
     }
   });
-}
 
-window.onload = main;
+});
 
 
