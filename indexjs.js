@@ -1,4 +1,4 @@
-function main(){
+document.addEventListener("DOMContentLoaded", function() {
 
     const btnInfo = document.querySelector(".info");
     const listInfo = document.querySelector(".listInfo");
@@ -19,6 +19,6 @@ function main(){
         mouseFollow3.style.left = e.pageX + "px";
         mouseFollow3.style.top = e.pageY + "px";
     });
-};
+});
 
-window.onload = main;
+
