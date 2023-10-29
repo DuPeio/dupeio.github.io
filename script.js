@@ -1,4 +1,4 @@
-function main() {
+function main(){
   //Creation des variables
   const btnLightning = document.querySelector(".btn");
   const mode = document.querySelector(".mode");
@@ -7,19 +7,20 @@ function main() {
   const experienceBtn = document.querySelector(".experienceBtn");
   const competenceBtn = document.querySelector(".competenceBtn");
   const contactBtn = document.querySelector(".contactBtn");
+  const jeuBtn = document.querySelector(".jeuBtn");
   const me = document.querySelector(".me");
   const etude = document.querySelector(".etude");
   const experience = document.querySelector(".experience");
   const competence = document.querySelector(".competence");
   const contact = document.querySelector(".contact");
   const subtitle = document.querySelector(".subtitle");
+  const jeu = document.querySelector(".jeu");
   let url = location.href; // Récupère l'URL complète
   let parts = url.split("/"); // Divise l'URL en parties distinctes
   let lastPart = parts[parts.length - 1];  // Récupère la dernière partie
   const btnArrowOne = document.querySelector(".flecheUn");
   const btnArrowTwo = document.querySelector(".flecheDeux");
   const btnArrowGen = document.querySelector(".flecheGen");
-  
   //Mode Sombre
   mode.addEventListener("click", () => {
     if (
@@ -31,7 +32,7 @@ function main() {
       mode.innerHTML =
         '<img src="./images/icone/sunV2.png" alt="Icone Soleil" id="mode1" title="Mode Clair">';
       document.querySelector("header").style.backgroundColor = "#000338";
-      document.querySelector(".derriere").style.color = "White";
+      document.querySelector("h1").style.color = "White";
       btnLightning.innerHTML =
         '<img src="./images/icone/flechev3.png" alt="Icone Lune" id="btn"></img>';
       console.log(document.querySelector(".mode"));
@@ -40,13 +41,12 @@ function main() {
       mode.innerHTML =
         '<img src="./images/icone/moonV2.png" alt="Icone soleil" id="mode2" title="Mode Sombre">';
       document.querySelector("header").style.backgroundColor = "White";
-      document.querySelector(".derriere").style.color = "#000338";
+      document.querySelector("h1").style.color = "#000338";
       btnLightning.innerHTML =
         '<img src="./images/icone/flechev2.png" alt="Icone fleche" id="btn"></img>';
       console.log(document.querySelector(".mode"));
     }
   }); 
-  
   //Eclair qui descend la page
   btnLightning.addEventListener("click", () => {
     window.scrollTo({
@@ -55,7 +55,6 @@ function main() {
       behavior: "smooth",
     });
   });
-  
   //Nav barre/ Gestion du contenu avec nav bar
   meBtn.addEventListener("click", () => {
     subtitle.innerHTML = "Et voici mon site web CV !";
@@ -69,8 +68,9 @@ function main() {
     competenceBtn.classList.remove("current");
     contact.classList.add("hide");
     contactBtn.classList.remove("current");
+    jeu.classList.add("hide");
+    jeuBtn.classList.remove("current");
   });
-  
   etudeBtn.addEventListener("click", () => {
     subtitle.innerHTML = "Partie Etude";
     me.classList.add("hide");
@@ -83,8 +83,9 @@ function main() {
     competenceBtn.classList.remove("current");
     contact.classList.add("hide");
     contactBtn.classList.remove("current");
+    jeu.classList.add("hide");
+    jeuBtn.classList.remove("current");
   });
-  
   experienceBtn.addEventListener("click", () => {
     subtitle.innerHTML = "Partie Expérience";
     me.classList.add("hide");
@@ -97,8 +98,9 @@ function main() {
     competenceBtn.classList.remove("current");
     contact.classList.add("hide");
     contactBtn.classList.remove("current");
+    jeu.classList.add("hide");
+    jeuBtn.classList.remove("current");
   });
-  
   competenceBtn.addEventListener("click", () => {
     subtitle.innerHTML = "Partie Compétence";
     me.classList.add("hide");
@@ -111,8 +113,9 @@ function main() {
     competenceBtn.classList.add("current");
     contact.classList.add("hide");
     contactBtn.classList.remove("current");
+    jeu.classList.add("hide");
+    jeuBtn.classList.remove("current");
   });
-  
   contactBtn.addEventListener("click", () => {
     subtitle.innerHTML = "Partie Contact";
     me.classList.add("hide");
@@ -125,8 +128,24 @@ function main() {
     competenceBtn.classList.remove("current");
     contact.classList.remove("hide");
     contactBtn.classList.add("current");
+    jeu.classList.add("hide");
+    jeuBtn.classList.remove("current");
   });
-  
+  jeuBtn.addEventListener("click", () => {
+    subtitle.innerHTML = "Partie Mini Jeu";
+    me.classList.add("hide");
+    meBtn.classList.remove("current");
+    etude.classList.add("hide");
+    etudeBtn.classList.remove("current");
+    experience.classList.add("hide");
+    experienceBtn.classList.remove("current");
+    competence.classList.add("hide");
+    competenceBtn.classList.remove("current");
+    contact.classList.add("hide");
+    contactBtn.classList.remove("current");
+    jeu.classList.remove("hide");
+    jeuBtn.classList.add("current");
+  });
   // Gestion du contenu avec index
   if (lastPart === "main.html#me") {
     subtitle.innerHTML = "Et voici mon site web CV !";
@@ -189,10 +208,9 @@ function main() {
     contact.classList.remove("hide");
     contactBtn.classList.add("current");
   }
-  
   // Fleche qui remonte
   const pixelDebut = debut.offsetTop;
-  btnArrowGen.addEventListener("click", () => {
+  btnArrowGen.addEventListener("click", () =>{
     btnArrowGen.classList.toggle("flecheTurn");
     btnArrowOne.classList.toggle("flecheDiscoUn");
     btnArrowTwo.classList.toggle("flecheDiscoDeux");
@@ -211,11 +229,10 @@ function main() {
       });
     });
   });
-  
-  window.addEventListener("scroll", () => {
+  window.addEventListener("scroll", () =>{
     if (scrollY > pixelDebut) {
       btnArrowGen.classList.remove("flecheHideGen");
-    } else {
+    }else{
       btnArrowGen.classList.add("flecheHideGen");
       btnArrowGen.classList.remove("flecheTurn");
       btnArrowOne.classList.remove("flecheDiscoUn");
